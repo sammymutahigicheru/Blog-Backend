@@ -16,7 +16,11 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "type":"hasMany",
+    "model": "AccessToken",
+    "foreignKey":""
+  },
   "acls": [],
   "methods": {}
 }
