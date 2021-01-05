@@ -11,19 +11,21 @@
       "default": "last_name"
     },
     "last_name": {
-      "type":"string"
+      "type": "string"
     },
     "created_at": {
       "type": "number"
     },
-    "birth_date":{
-      "type":"date"
+    "birth_date": {
+      "type": "date"
     },
-    "age":{
-      "type":"number"
+    "age": {
+      "type": "number"
     },
-    "history":{
-      "type": ["object"]
+    "history": {
+      "type": [
+        "object"
+      ]
     }
   },
   "validations": [],
