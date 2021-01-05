@@ -8,7 +8,7 @@
   "properties": {
     "email": {
       "type": "string",
-      "required":true
+      "required": true
     },
     "password": {
       "type": "string",
@@ -18,9 +18,9 @@
   "validations": [],
   "relations": {
     "Profile": {
-      "type":"hasOne",
+      "type": "hasOne",
       "model": "Profile",
-      "foreignKey":""
+      "foreignKey": ""
     }
   },
   "acls": [],
