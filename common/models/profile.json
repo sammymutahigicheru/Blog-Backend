@@ -15,6 +15,15 @@
     },
     "created_at": {
       "type": "number"
+    },
+    "birth_date":{
+      "type":"date"
+    },
+    "age":{
+      "type":"number"
+    },
+    "history":{
+      "type": ["object"]
     }
   },
   "validations": [],
