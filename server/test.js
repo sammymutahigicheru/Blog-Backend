@@ -24,9 +24,12 @@ var filter = {
     where: {
         name: {like: 'sammy'}
     },
-    order: 'id ASC'
+    order: 'id ASC',
+    fields: {
+        email: true
+    }
 }
 
-models.Profile.find(filter,(err,found) =>{
+models.Profile.find('5ff559b80b093a32a8f25c07',filter,(err,found) =>{
     console.log("Found?",err,found);
 })
