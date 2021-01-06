@@ -21,11 +21,12 @@ var models = require('./server.js').models;
 // })
 
 var filter = {
-    where: {},
-    order: 'date ASC',
-    limit: 3
+    where: {
+        name: {like: 'sammy'}
+    },
+    order: 'id ASC'
 }
 
-models.Profile.findOne({where:{name: 'sammy'}},(err,found) =>{
+models.Profile.find(filter,(err,found) =>{
     console.log("Found?",err,found);
 })
