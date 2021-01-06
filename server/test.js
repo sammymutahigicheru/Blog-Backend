@@ -20,7 +20,8 @@ var models = require('./server.js').models;
 //     })
 // })
 
-var filter = {
+/**
+ * var filter = {
     where: {
         name: {like: 'sammy'}
     },
@@ -29,7 +30,11 @@ var filter = {
         email: true
     }
 }
+ * 
+ */
 
-models.Profile.find('5ff559b80b093a32a8f25c07',filter,(err,found) =>{
+
+models.Profile.findById('5ff559b80b093a32a8f25c07',(err,found) =>{
     console.log("Found?",err,found);
+    found.destroy();
 })
