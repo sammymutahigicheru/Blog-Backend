@@ -5,6 +5,7 @@
 
 'use strict';
 
+const { Role } = require('loopback');
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 
@@ -48,3 +49,8 @@ app.models.user.afterRemote('create', (ctx,user,next) =>{
   });
   next();
 });
+app.models.Role.find({where: {name: 'admin'}},(err,role) =>{
+  if(!err && role){
+    console.log('No error , role is',role)
+  }
+})
