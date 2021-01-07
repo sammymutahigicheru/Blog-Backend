@@ -52,5 +52,25 @@ app.models.user.afterRemote('create', (ctx,user,next) =>{
 app.models.Role.find({where: {name: 'admin'}},(err,role) =>{
   if(!err && role){
     console.log('No error , role is',role)
+    if(role.length === 0){
+      app.models.Role.create({
+        name: 'admin',
+
+      },(err1,result) =>{
+        if(!err1 && result){
+
+          app.models.user.findOne((usererr,user) =>{
+            if(!usererr && user){
+              result.principals.create({
+                principalType: app.models.RoleMapping.USER,
+                principalId: user.id
+              },(err2,principal) =>{
+                console.log("Created Principal",err2,principal);
+              })
+            }
+          })
+        }
+      })
+    }
   }
 })
