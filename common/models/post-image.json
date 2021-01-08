@@ -1,11 +1,18 @@
 {
   "name": "PostImage",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "date"
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
